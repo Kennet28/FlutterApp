@@ -1,0 +1,3 @@
+//iniciar mongod linux
+sudo service mongod start
+ 
