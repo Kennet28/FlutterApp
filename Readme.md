@@ -1,0 +1,1 @@
+cree esta aplicacion con el objetivo de aprender como crear una rest api con nodejs express y mongodb mientras lo consumo en una aplicación de flutter
