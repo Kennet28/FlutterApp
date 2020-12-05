@@ -6,7 +6,7 @@ async function main() {
         await connect();
         // Express application
         await app.listen(5000);
-        console.log('Server on port 4000: running');
+        console.log('Server on port 5000: running');
     } catch (error) {
         console.log(error)
     }

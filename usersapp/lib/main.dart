@@ -1,11 +1,14 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
-import 'dart:async';
+// import 'dart:async';
 import 'dart:convert';
 
 void main() {
   runApp(
-    MaterialApp(home: HomePage()),
+    MaterialApp(
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+    ),
   );
 }
 
@@ -19,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   List userList;
   get getUsers async {
     http.Response response =
-        await http.get('http://192.168.1.72:5000/api/users');
+        await http.get('http://192.168.1.1:5000/api/users');
     data = json.decode(response.body);
     setState(() {
       userList = data['users'];
@@ -27,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   get addUsers async {
-    await http.get('http://192.168.1.72:5000/api/users/create');
+    await http.get('http://192.168.1.1:5000/api/users/create');
   }
 
   @override
@@ -60,7 +63,7 @@ class ListUsers extends StatelessWidget {
 
   final List userList;
   get delusers async {
-    await http.get('http://192.168.1.72:5000/api/users/delete');
+    await http.get('http://192.168.1.1:5000/api/users/delete');
   }
 
   @override

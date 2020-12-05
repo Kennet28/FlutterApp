@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-
 const cors = require('cors');
 const morgan = require('morgan');
-
 app.use(morgan('dev'));
-app.use(cors());
+app.use(cors({ origin: /http:\/\/(127(\.\d){3}|localhost)/}));
 app.use(require('./routes/users'));
+app.use(require('./routes/version'));
+app.options('*',cors());
 module.exports = app;

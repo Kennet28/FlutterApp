@@ -1,0 +1,15 @@
+GET http://localhost:5000/api/users
+
+###
+POST http://localhost:5000/api/users/createone/
+Content-Type: application/json
+
+{
+    "firstName":"Kennet",
+    "lastName":"Avila",
+    "avatar": "aqui va la url de la imagen"
+
+}
+
+###
+GET http://localhost:5000
